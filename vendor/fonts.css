@@ -1,0 +1,29 @@
+@font-face { 
+    font-family: "Inter";
+    src: url("./fonts/InterRegular/InterRegular.eot");
+    src: url("./fonts/InterRegular/InterRegular.eot?#iefix")format("embedded-opentype"),
+    url("./fonts/InterRegular/InterRegular.woff") format("woff"),
+    url("./fonts/InterRegular/InterRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face { 
+    font-family: "Inter";
+    src: url("./fonts/InterBold/InterBold.eot");
+    src: url("./fonts/InterBold/InterBold.eot?#iefix")format("embedded-opentype"),
+    url("./fonts/InterBold/InterBold.woff") format("woff"),
+    url("./fonts/InterBold/InterBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face { 
+    font-family: "Inter";
+    src: url("./fonts/InterBlack/InterBlack.eot");
+    src: url("./fonts/InterBlack/InterBlack.eot?#iefix")format("embedded-opentype"),
+    url("./fonts/InterBlack/InterBlack.woff") format("woff"),
+    url("./fonts/InterBlack/InterBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru_en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto Russia</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="логотип">
+    </header>
+    <section class="profile">
+        <div class="profile__container">
+            <img class="profile__photo" src="./images/image.jpg" alt="фотография профиля">
+            <div class="profile__info">
+
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+
+                <p class="profile__job">Исследователь океана</p>
+            </div>
+            <div class="profile__edit-btn-box"><svg class="profile__edit-btn-pen" width="10" height="10"
+                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 1.32827L2.60377 8.7666L1.28302 7.41936L8.66038 0L10 1.32827ZM0 10L1.96226 9.41177L0.584906 8.08349L0 10Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="profile__container">
+            <button class="profile__add-btn">&#43;</button>
+        </div>
+    </section>
+    <ul class="cards">
+        <li class="card">
+
+
+            <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="Йорк">
+            <div class="card__container">
+                <h2 class="card__text">Йорк</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+        <li class="card">
+
+            <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Лидс">
+            <div class="card__container">
+                <h2 class="card__text">Лидс</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+        <li class="card">
+
+
+            <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Тур">
+            <div class="card__container">
+                <h2 class="card__text">Тур</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+        <li class="card">
+
+
+            <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg" alt="Экс-ан-Прованс">
+            <div class="card__container">
+                <h2 class="card__text">Экс-ан-Прованс</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+        <li class="card">
+
+
+            <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg" alt="Нижний Новгород">
+            <div class="card__container">
+                <h2 class="card__text">Нижний Новгород</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+        <li class="card">
+
+
+            <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Белград">
+            <div class="card__container">
+                <h2 class="card__text">Белград</h2>
+                <button type="button" class="card__heart card__heart_active"></button>
+            </div>
+        </li>
+    </ul>
+    <div class="popup">
+
+        <form class="popup__container">
+            <svg class="popup__close" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                    fill="white" />
+            </svg>
+            <h2 class="popup__title">Редактировать профиль</h2>
+
+            <input class="popup__field" id="name" type="text" placeholder="Жак-Ив Кусто" name="name" required>
+
+            <input class="popup__field" id="job" type="text" placeholder="Исследователь океана" name="job" required>
+            <button type="submit" class="popup__btn">Сохранить</button>
+        </form>
+
+    </div>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+<footer class="footer">
+    <p class="footer__copyright">© 2023 Mesto Russia</p>
+</footer>
+
+</html>

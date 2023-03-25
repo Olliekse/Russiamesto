@@ -1,0 +1,57 @@
+.profile__edit-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    height: 24px;
+    width: 24px;
+    margin: 35px 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.profile__edit-btn-box:hover {
+    opacity: 0.6;
+    transition: opacity .3s ease-in-out;
+}
+
+@media screen and (max-width: 879px) {
+    .profile__edit-btn-box {
+        margin: 30px 0 0;
+    
+    }
+    
+}
+
+@media screen and (max-width: 634px) {
+    .profile__edit-btn-box {
+        margin: 27px 0 0;
+        height: 20px;
+        width: 20px;
+    
+    }
+    
+}
+
+@media screen and (max-width: 435px) {
+    .profile__edit-btn-box {
+        height: 18px;
+        width: 18px;
+        margin: 0;
+        position: absolute;
+        right: 0px;
+        top: 145px;
+        
+
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .profile__edit-btn-box {
+        top: 155px;
+        right: 20px;
+    }
+    
+}
