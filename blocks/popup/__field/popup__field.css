@@ -23,7 +23,7 @@ input::placeholder {
     
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 520px) {
     .popup__field {
         width: 90%;
         margin: 0 22px;

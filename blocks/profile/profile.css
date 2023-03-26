@@ -8,7 +8,7 @@
 }
 
 
-@media only screen and (max-width: 879px) {
+@media only screen and (max-width: 900px) {
     .profile {
         flex-direction: column;
         width: 70%;
@@ -19,7 +19,8 @@
 
 @media screen and (max-width: 320px) {
     .profile {
-        width: 282px;
+        /*width: 282px;*/
+        width: 90%;
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 38px;

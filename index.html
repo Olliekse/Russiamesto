@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru_en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -34,62 +34,66 @@
             <button class="profile__add-btn">&#43;</button>
         </div>
     </section>
-    <ul class="cards">
-        <li class="card">
+
+    <section>
+        <ul class="cards">
+            <li class="card">
 
 
-            <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="Йорк">
-            <div class="card__container">
-                <h2 class="card__text">Йорк</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-        <li class="card">
+                <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="Йорк">
+                <div class="card__container">
+                    <h2 class="card__text">Йорк</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+            <li class="card">
 
-            <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Лидс">
-            <div class="card__container">
-                <h2 class="card__text">Лидс</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-        <li class="card">
-
-
-            <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Тур">
-            <div class="card__container">
-                <h2 class="card__text">Тур</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-        <li class="card">
+                <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Лидс">
+                <div class="card__container">
+                    <h2 class="card__text">Лидс</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+            <li class="card">
 
 
-            <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg" alt="Экс-ан-Прованс">
-            <div class="card__container">
-                <h2 class="card__text">Экс-ан-Прованс</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-        <li class="card">
+                <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Тур">
+                <div class="card__container">
+                    <h2 class="card__text">Тур</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+            <li class="card">
 
 
-            <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg" alt="Нижний Новгород">
-            <div class="card__container">
-                <h2 class="card__text">Нижний Новгород</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-        <li class="card">
+                <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg" alt="Экс-ан-Прованс">
+                <div class="card__container">
+                    <h2 class="card__text">Экс-ан-Прованс</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+            <li class="card">
 
 
-            <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Белград">
-            <div class="card__container">
-                <h2 class="card__text">Белград</h2>
-                <button type="button" class="card__heart card__heart_active"></button>
-            </div>
-        </li>
-    </ul>
-    <div class="popup">
+                <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg" alt="Нижний Новгород">
+                <div class="card__container">
+                    <h2 class="card__text">Нижний Новгород</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+            <li class="card">
+
+
+                <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Белград">
+                <div class="card__container">
+                    <h2 class="card__text">Белград</h2>
+                    <button type="button" class="card__heart card__heart_active"></button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="popup popup_show">
 
         <form class="popup__container">
             <svg class="popup__close" width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -100,17 +104,19 @@
             </svg>
             <h2 class="popup__title">Редактировать профиль</h2>
 
-            <input class="popup__field" id="name" type="text" placeholder="Жак-Ив Кусто" name="name" required>
+            <input class="popup__field" id="name" type="text" name="name" required>
 
-            <input class="popup__field" id="job" type="text" placeholder="Исследователь океана" name="job" required>
+            <input class="popup__field" id="job" type="text" name="job" required>
             <button type="submit" class="popup__btn">Сохранить</button>
         </form>
 
     </div>
+
+    <footer class="footer">
+        <p class="footer__copyright">© 2023 Mesto Russia</p>
+    </footer>
+
     <script type="text/javascript" src="./scripts/index.js"></script>
 </body>
-<footer class="footer">
-    <p class="footer__copyright">© 2023 Mesto Russia</p>
-</footer>
 
 </html>

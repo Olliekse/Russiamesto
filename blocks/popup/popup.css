@@ -1,7 +1,7 @@
 .popup {
     width: 100%;
     height: 100%;
-    display: none;
+    display: initial;
     background: rgba(17, 17, 17, 0.65);
     position: fixed;
     top: 0px;
