@@ -19,7 +19,6 @@
 
 @media screen and (max-width: 320px) {
     .profile {
-        /*width: 282px;*/
         width: 90%;
         flex-direction: row;
         flex-wrap: wrap;
