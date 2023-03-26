@@ -5,6 +5,8 @@
     top: -40px;
     right: -40px;
     cursor: pointer;
+    background-image: url(../../../images/close.svg);
+    background-repeat: no-repeat;
 }
 
 .popup__close:hover {
