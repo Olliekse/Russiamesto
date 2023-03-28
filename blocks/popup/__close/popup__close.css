@@ -8,7 +8,7 @@
     cursor: pointer;
     background-image: url(../../../images/close.svg);
     background-repeat: no-repeat;
-    background-color: #000000;
+    background-color: transparent;
     background-size: contain;
     border-style: none;
 }
@@ -23,7 +23,7 @@
     .popup__close {
         background-size: 20px 20px;
         top: -36px;
-        right: 0;
+        right: -12px;
     }
     
 }

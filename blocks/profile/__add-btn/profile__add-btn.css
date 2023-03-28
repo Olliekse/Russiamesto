@@ -1,4 +1,5 @@
 .profile__add-btn {
+    padding: 0;
     justify-self: flex-end;
     width: 150px;
     height: 50px;
@@ -10,6 +11,7 @@
     background-image: url(../../../images/plus-sign.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 16px 16px;
 
 }
 .profile__add-btn:hover {

@@ -1,4 +1,5 @@
 .profile__edit-btn-box {
+    padding: 0;
     background-image: url(../../../images/Edit\ Button.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -31,7 +32,7 @@
 
 @media screen and (max-width: 370px) {
     .profile__edit-btn-box {
-        margin: 2px 18px 0 0;
+        margin: 4px 18px 0 0;
         height: 18px;
         width: 18px;
         padding-right: 10px;
