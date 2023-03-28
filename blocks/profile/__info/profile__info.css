@@ -1,22 +1,23 @@
 .profile__info {
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: 13px 18px 10px;
-    max-width: 336px;
+    justify-content: center;
+    min-width: 282px;
+    width: 65%;
+    gap: 7px;
    
 }
 
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 918px) {
     .profile__info {
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .profile_info {
-        margin: 26px 19px 36px;
         align-items: center;
     }
 }
+
+@media screen and (max-width: 579px) {
+    .profile__info {
+        width: 100%;
+
+    }
     
+}

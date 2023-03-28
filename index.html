@@ -1,110 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Место-Россия</title>
+    <title>Mesto-Russia</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
     <header class="header">
-        <img class="logo" src="./images/logo.svg" alt="логотип">
+        <img class="logo" src="./images/logo.svg" alt="logo">
     </header>
-    <section class="profile">
-        <div class="profile__container">
-            <img class="profile__photo" src="./images/image.jpg" alt="фотография профиля">
+    <main class="content">
+
+        <section class="profile">
+            <img class="profile__photo" src="./images/image.jpg" alt="profile photo">
             <div class="profile__info">
-
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-
-                <p class="profile__job">Исследователь океана</p>
+                <div class="profile__title">
+                    <h1 class="profile__name">Jacques Cousteau</h1>
+                    <button type="button" class="profile__edit-btn-box" aria-label="edit button"></button>
+                </div>
+                <p class="profile__job">Oceanographer</p>
             </div>
-            <div class="profile__edit-btn-box"><div class="profile__edit-btn-pen"></div>
             </div>
-        </div>
-        <div class="profile__container">
-            <button class="profile__add-btn">&#43;</button>
-        </div>
-    </section>
+            <button type="button" class="profile__add-btn" aria-label="add button"></button>
+            </div>
+        </section>
 
-    <section>
-        <ul class="cards">
-            <li class="card">
+        <section>
+            <ul class="cards">
+                <li class="card">
 
 
-                <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="Йорк">
-                <div class="card__container">
-                    <h2 class="card__text">Йорк</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-            <li class="card">
+                    <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="York">
+                    <div class="card__container">
+                        <h2 class="card__text">York</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+                <li class="card">
 
-                <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Лидс">
-                <div class="card__container">
-                    <h2 class="card__text">Лидс</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-            <li class="card">
-
-
-                <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Тур">
-                <div class="card__container">
-                    <h2 class="card__text">Тур</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-            <li class="card">
+                    <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Leeds">
+                    <div class="card__container">
+                        <h2 class="card__text">Leeds</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+                <li class="card">
 
 
-                <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg" alt="Экс-ан-Прованс">
-                <div class="card__container">
-                    <h2 class="card__text">Экс-ан-Прованс</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-            <li class="card">
+                    <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Tours">
+                    <div class="card__container">
+                        <h2 class="card__text">Tours</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+                <li class="card">
 
 
-                <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg" alt="Нижний Новгород">
-                <div class="card__container">
-                    <h2 class="card__text">Нижний Новгород</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-            <li class="card">
+                    <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg"
+                        alt="Aix-en-provence">
+                    <div class="card__container">
+                        <h2 class="card__text">Aix-en-provence</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+                <li class="card">
 
 
-                <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Белград">
-                <div class="card__container">
-                    <h2 class="card__text">Белград</h2>
-                    <button type="button" class="card__heart card__heart_active"></button>
-                </div>
-            </li>
-        </ul>
-    </section>
+                    <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg"
+                        alt="Nizhny Novgorod">
+                    <div class="card__container">
+                        <h2 class="card__text">Nizhny Novgorod</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+                <li class="card">
 
-    <div class="popup popup_show">
 
-        <form class="popup__container">
-            <div class="popup__close"></div>
-            <h2 class="popup__title">Редактировать профиль</h2>
-
-            <input class="popup__field" id="name" type="text" name="name" required>
-
-            <input class="popup__field" id="job" type="text" name="job" required>
-            <button type="submit" class="popup__btn">Сохранить</button>
-        </form>
-
-    </div>
-
+                    <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Belgrade">
+                    <div class="card__container">
+                        <h2 class="card__text">Belgrade</h2>
+                        <button aria-label="like button" type="button" class="card__heart card__heart_active"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
     <footer class="footer">
         <p class="footer__copyright">© 2023 Mesto Russia</p>
     </footer>
-
+    <div class="popup">
+        <div class="popup__container">
+            <button type="button" class="popup__close"></button>
+            <h2 class="popup__title">Edit profile</h2>
+            <form class="popup__form" name="profile-form">
+                <input type="text" placeholder="Enter name" class="popup__input popup__input_role_name" id="name" name="name" required>
+                <input type="text" placeholder="Enter job" class="popup__input popup__input_role_job" id="job" name="job" required>
+                <button type="submit" class="popup__btn">Save</button>
+            </form>
+        </div>
+    </div>
     <script src="./scripts/index.js"></script>
 </body>
 

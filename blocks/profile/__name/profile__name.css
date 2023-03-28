@@ -1,10 +1,13 @@
 .profile__name {
-    font-weight: 500;
+    box-sizing: border-box;
     font-size: 42px;
-    line-height: 114%;
-    margin: 0 0 8px;
-    padding: 0;
-    letter-spacing: 0.5px;
+    font-weight: 500;
+    line-height: 48px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 294px;
 }
 
 @media screen and (max-width: 702px) {
@@ -16,13 +19,18 @@
 @media screen and (max-width: 634px) {
     .profile__name {
         font-size: 30px;
+        padding-left: 24px;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 370px) {
     .profile__name {
         font-size: 27px;
         line-height: 33px;
-        text-align: center; 
+        text-align: center;
+        margin: 5px 0 0 29px;
+        
+     
+    
     }
 }

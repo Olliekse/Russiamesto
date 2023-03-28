@@ -10,12 +10,12 @@
 
 @font-face { 
     font-family: "Inter";
-    src: url("./fonts/InterBold/InterBold.eot");
-    src: url("./fonts/InterBold/InterBold.eot?#iefix")format("embedded-opentype"),
-    url("./fonts/InterBold/InterBold.woff") format("woff"),
-    url("./fonts/InterBold/InterBold.ttf") format("truetype");
+    src: url("./fonts/InterMedium/InterMedium.eot");
+    src: url("./fonts/InterMedium/InterMedium.eot?#iefix")format("embedded-opentype"),
+    url("./fonts/InterMedium/InterMedium.woff") format("woff"),
+    url("./fonts/InterMedium/InterMedium.ttf") format("truetype");
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 @font-face { 

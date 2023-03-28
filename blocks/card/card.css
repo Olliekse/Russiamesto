@@ -3,7 +3,6 @@
     flex-direction: column;
     max-width: 282px;
     margin: 0;
-    height: 361px;
     background-color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 10px;
 }
