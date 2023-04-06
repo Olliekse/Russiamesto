@@ -1,4 +1,5 @@
 .popup__photo-container {
+    margin: 0;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -6,12 +7,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-  @media screen and (max-width: 568px) {
-    .popup__photo-container {
-      width: 75vw;
-      height: 75vh;
-    }
-    
-}
 

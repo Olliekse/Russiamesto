@@ -11,8 +11,8 @@ The page features:
 - font-smoothing and text-size adjust properties;
 - optimizeLegibility text-rendering;
 - A maximum resolution of 1280px, a minimum of 320px and minor breakpoints in-between;  
-- hover effects;
-- JavaScript functions, variable declarations and listeners.
+- hover and popup window effects;
+- JavaScript functions, loops, variable declarations and listeners.
 
 
 ## Envisaged improvements
@@ -23,10 +23,11 @@ Improvements that can be made to the webpage include:
 - embed videos;
 - ensure cross-browser compatibility across the whole webpage;
 - enhance the popup so that the info fields don't disappear after a page refresh;
-- create additional hover effects, for example, with images, and add the ability to add new cards;
+- create additional hover effects, for example, with images;
 - optimise the minor breakpoints so the code as a whole is lighter, as well as streamline all code in general (removing spaces for quicker loading times);
 - create major breakpoints for all main smart phone, tablet and PC resolution (up to full HD);
-- make the card heart turn black when clicked.
+- add a counter for the number of 'likes';
+- short text description of a place via popup window.
 
 ### Github page link
 
