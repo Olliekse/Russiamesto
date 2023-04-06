@@ -23,17 +23,18 @@
                 </div>
                 <p class="profile__job">Исследователь океана</p>
             </div>
-          
+
             <button type="button" class="profile__add-btn" aria-label="кнопка добавления"></button>
-         
+
         </section>
 
         <section>
             <ul class="cards">
-                <li class="card">
+                <!-- <li class="card">
 
 
                     <img class="card__image" src="./images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg" alt="Йорк">
+                    <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Йорк</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
@@ -42,6 +43,7 @@
                 <li class="card">
 
                     <img class="card__image" src="./images/al-elmes-yZAjIcXxpR0-unsplash.jpg" alt="Лидс">
+                    <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Лидс</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
@@ -51,6 +53,7 @@
 
 
                     <img class="card__image" src="./images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg" alt="Тур">
+                    <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Тур</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
@@ -61,6 +64,7 @@
 
                     <img class="card__image" src="./images/christian-mackie-PBvFpF3f624-unsplash.jpg"
                         alt="Экс-ан-Прованс">
+                        <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Экс-ан-Прованс</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
@@ -71,6 +75,7 @@
 
                     <img class="card__image" src="./images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg"
                         alt="Нижний Новгород">
+                        <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Нижний Новгород</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
@@ -80,28 +85,65 @@
 
 
                     <img class="card__image" src="./images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg" alt="Белград">
+                    <button aria-label="удалить-кнопка" type="button" class="card__delete"></button>
                     <div class="card__container">
                         <h2 class="card__text">Белград</h2>
                         <button aria-label="лайк-кнопка" type="button" class="card__heart card__heart_active"></button>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">© 2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+
+    <div class="popup" id="popup-profile">
         <div class="popup__container">
             <button type="button" class="popup__close"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile-form">
-                <input type="text" placeholder="Введите имя" class="popup__input popup__input_role_name" id="name" name="name" required>
-                <input type="text" placeholder="Введите профессия" class="popup__input popup__input_role_job" id="job" name="job" required>
+                <input type="text" placeholder="Введите имя" class="popup__input popup__input_role_name" id="name"
+                    name="name" required>
+                <input type="text" placeholder="Введите профессия" class="popup__input popup__input_role_job" id="job"
+                    name="job" required>
                 <button type="submit" class="popup__btn">Сохранить</button>
             </form>
         </div>
     </div>
+
+    <div class="popup" id="popup-add">
+        <div class="popup__container">
+            <button type="button" class="popup__close" id="popup-close"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form" name="add-form">
+                <input type="text" placeholder="Введите название" class="popup__input" id="place-name" name="place-name"
+                    required>
+                <input type="url" placeholder="Введите ссылка на картину" class="popup__input" id="pic-link"
+                    name="pic-link" required>
+                <button type="submit" class="popup__btn" id="popup-submit">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-photo">
+        <div class="popup__photo-container">
+            <img class="popup__photo" src="" alt="" id="photo">
+            <p class="popup__photo-text"></p>
+            <button type="button" class="popup__close" id="popup-photo-close"></button>
+        </div>
+    </div>
+
+    <template id="card-template">
+        <li class="card">
+            <img class="card__image" src="" alt="">
+            <button aria-label="удалить-кнопка" type="button" class="card__delete" id="delete-btn"></button>
+            <div class="card__container">
+                <h2 class="card__text"></h2>
+                <button aria-label="лайк-кнопка" type="button" class="card__heart" id="heart-like"></button>
+            </div>
+        </li>
+    </template>
     <script src="./scripts/index.js"></script>
 </body>
 
