@@ -1,169 +1,177 @@
+const formElement = document.querySelector(".popup");
+const nameInput = document.getElementById("name");
+const jobInput = document.getElementById("job");
+const newName = document.querySelector(".profile__name");
+const newJob = document.querySelector(".profile__job");
+const deleteButtons = document.getElementsByClassName("card__delete");
+const cardsContainer = document.querySelector(".cards");
+const likeButtons = document.getElementsByClassName("card__heart");
+const inputUrl = document.getElementById("pic-link");
+const inputName = document.getElementById("place-name");
+const photoText = document.querySelector(".popup__photo-text");
+const photo = document.querySelector("#photo");
 
-const formElement = document.querySelector('.popup');
-const nameInput = document.getElementById('name');
-const jobInput = document.getElementById('job');
-const newName = document.querySelector('.profile__name');
-const newJob = document.querySelector('.profile__job');
-const deleteButtons = document.getElementsByClassName('card__delete');
-const cardsContainer = document.querySelector('.cards');
-const likeButtons = document.getElementsByClassName('card__heart');
+// calls the function that renders the six initial cards
 
-const initialCards = [
-	{
-	  name: 'Йорк',
-	  link: './images/jeremy-stewardson-FcTv5d5kcPE-unsplash.jpg'
-	},
-	{
-	  name: 'Лидс',
-	  link: './images/al-elmes-yZAjIcXxpR0-unsplash.jpg'
-	},
-	{
-	  name: 'Тур',
-	  link: './images/jordi-vich-navarro-Ft_dAqZ6qq8-unsplash.jpg'
-	},
-	{
-	  name: 'Экс-ан-Прованс',
-	  link: './images/christian-mackie-PBvFpF3f624-unsplash.jpg'
-	},
-	{
-	  name: 'Нижний Новгород',
-	  link: './images/georgy-trofimov-8wsxtCoyIRs-unsplash.jpg'
-	},
-	{
-	  name: 'Белград',
-	  link: './images/dimitrije-milenkovic-Wa9gkmHOTf8-unsplash.jpg'
-	}
-  ];
+renderInitialCards();
 
-loadInitialCards();
+// adds a listener to the 'edit profile' button and opens the corresponding popup
 
-document.querySelector('.profile__edit-btn-box').addEventListener('click', openPopup);
-document.querySelector('.popup__close').addEventListener('click', closePopup);
-document.querySelector('[name="profile-form"]').addEventListener('submit', handleProfileFormSubmit);
-document.querySelector('[name="add-form"]').addEventListener('submit', handleAddCardFormSubmit);
-document.querySelector('.profile__add-btn').addEventListener('click', openAddPopup);
-document.getElementById('popup-close').addEventListener('click', closeAddPopup);
-document.getElementById('popup-photo-close').addEventListener('click', closePhotoPopup);
+document
+  .querySelector(".profile__edit-btn-box")
+  .addEventListener("click", () => {
+    const popupProfile = document.querySelector(".popup_type_profile");
+    const name = newName.textContent;
+    const job = newJob.textContent;
+	
+    nameInput.value = name;
+    jobInput.value = job;
 
-// opens enlarged photo popup
+    openPopup(popupProfile);
+  });
 
-function openPhotoPopup () {
-	const photoClicked = this;
-	document.querySelector('#photo').src = photoClicked.src;
-	document.querySelector('#photo').alt = photoClicked.alt;
-	document.querySelector('.popup__photo-text').textContent = photoClicked.alt;
-	document.getElementById('popup-photo').classList.toggle('popup_opened');
-	document.getElementById('popup-photo').style.background = 'rgba(0, 0, 0, 0.9)';
+// closes the 'edit profile' popup upon clicking the 'X'
 
+document.querySelector(".popup__close").addEventListener("click", () => {
+  const popupProfile = document.querySelector(".popup_type_profile");
 
-}
-
-
-// closes enlarged photo popup
-
-function closePhotoPopup () {
-	document.getElementById('popup-photo').classList.toggle('popup_opened');
-}
-
-// makes the hearts turn black when clicked
-
-function likeCard() {
-	const cardLiked = this;
-	cardLiked.classList.toggle('card__heart_active'); 
-}
-
-// opens the profile edit popup
-
-function openPopup() {
-
-	document.getElementById('popup-profile').classList.toggle('popup_opened');
-	const name = newName.textContent;
-	const job = newJob.textContent;
-	nameInput.value = name;
-	jobInput.value = job;
-}
-
-// closes the profile edit popup
-
-function closePopup() {
-	document.getElementById('popup-profile').classList.toggle('popup_opened');
-}
-
-// submits user-entered profile popup info
-
-function handleProfileFormSubmit (evt) {
-
-    evt.preventDefault();
-    newName.textContent = nameInput.value;
-    newJob.textContent = jobInput.value;
-    closePopup();
-}
-
-// deletes a card
-
-  function deleteCard() {
-	const cardToRemove = this.parentNode;
-	cardToRemove.remove();
-}
-
-// creates the initial six cards upon page load
-
-function createInitialCards() {
-
-	for (i = 0; i < initialCards.length; i++) {
-
-		createCard(initialCards[i].link, initialCards[i].name); 
-	}
-}
-
-// loads the created initial cards
-
-function loadInitialCards() {
-	createInitialCards();
-}
+  closePopup(popupProfile);
+});
 
 // opens the 'add card' popup
 
-function openAddPopup() {
-	document.getElementById('popup-add').classList.toggle('popup_opened');
+document.querySelector(".profile__add-btn").addEventListener("click", () => {
+  const popupAdd = document.querySelector(".popup_type_card");
+
+  openPopup(popupAdd);
+});
+
+// closes the 'add card' popup upon clicking the 'X'
+
+document.getElementById("popup-close").addEventListener("click", () => {
+  const popupAdd = document.querySelector(".popup_type_card");
+
+  closePopup(popupAdd);
+});
+
+// closes the zoomed photo popup upon clicking the 'X'
+
+document.getElementById("popup-photo-close").addEventListener("click", () => {
+  const popupPhoto = document.querySelector(".popup_type_photo");
+
+  closePopup(popupPhoto);
+});
+
+// adds a listener to the 'edit profile' popup submit button
+
+document
+  .querySelector('[name="profile-form"]')
+  .addEventListener("submit", handleProfileFormSubmit);
+
+// adds a listener to the 'add card' popup submit button
+
+document
+  .querySelector('[name="add-form"]')
+  .addEventListener("submit", handleAddCardFormSubmit);
+
+// renders the six initial cards using a loop
+
+function renderInitialCards() {
+  initialCards.forEach((item) => {
+    const card = createCard(item);
+    renderCard(card);
+  });
 }
 
-// closes the 'add card' popup
+// appends a newly created card to the parent container
 
-function closeAddPopup() {
-	document.getElementById('popup-add').classList.toggle('popup_opened');
+function renderCard(elem) {
+  cardsContainer.append(elem);
 }
 
-// creates a new card using the template
+// creates a card with filled-in info, like and delete buttons and the corresponding listeners
 
-function createCard(url, name) {
+function createCard(item) {
+  const cardTemplate = document.getElementById("card-template").content;
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+  const deleteButton = cardElement.querySelector("#delete-btn");
+  const heartIcon = cardElement.querySelector("#heart-like");
+  const cardPhoto = cardElement.querySelector(".card__image");
+  const cardText = cardElement.querySelector(".card__text");
 
-	const cardTemplate = document.getElementById('card-template').content;
-	const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
-	cardElement.querySelector('.card__text').textContent = name;
-	cardElement.querySelector('.card__image').alt = name;
-	cardElement.querySelector('.card__image').src = url;
-	cardElement.querySelector('.card__image').addEventListener('click', openPhotoPopup);
-	cardElement.querySelector('#delete-btn').addEventListener('click', deleteCard);
-	cardElement.querySelector('#heart-like').addEventListener('click', likeCard);
-	cardsContainer.append(cardElement);
+  cardText.textContent = item.name;
+  cardPhoto.alt = item.name;
+  cardPhoto.src = item.link;
+
+  deleteButton.addEventListener("click", (e) => {
+    const cardToRemove = e.target.parentNode;
+
+    cardToRemove.remove();
+  });
+
+  heartIcon.addEventListener("click", (e) => {
+    const cardLiked = e.target;
+
+    cardLiked.classList.toggle("card__heart_active");
+  });
+
+  cardPhoto.addEventListener("click", (e) => {
+    const popupPhoto = document.querySelector(".popup_type_photo");
+    const photoClicked = e.target;
+
+    photo.src = photoClicked.src;
+    photo.alt = photoClicked.alt;
+    photoText.textContent = photoClicked.alt;
+
+    openPopup(popupPhoto);
+  });
+
+  return cardElement;
 }
 
-// submits user-entered 'new card' info 
+// a single function that can open any of the three popups
 
-function handleAddCardFormSubmit (evt) {
-
-    evt.preventDefault();
-    const inputUrl = document.getElementById('pic-link');
-	const inputName = document.getElementById('place-name');
-	const url = inputUrl.value;
-	const name = inputName.value;
-
-	createCard(url, name);
-
-	inputUrl.value = "";
-	inputName.value = "";
-  
-    closeAddPopup();
+function openPopup(element) {
+  element.classList.toggle("popup_opened");
 }
 
+// a single function that can close any of the three popups
+
+function closePopup(element) {
+  element.classList.toggle("popup_opened");
+}
+
+// submits user-entered 'edit profile' popup info
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+
+  const popupProfile = document.querySelector(".popup_type_profile");
+
+  newName.textContent = nameInput.value;
+  newJob.textContent = jobInput.value;
+
+  closePopup(popupProfile);
+}
+
+// submits user-entered 'new card' popup info, renders a new card then closes the popup
+
+function handleAddCardFormSubmit(evt) {
+  evt.preventDefault();
+
+  const popupAdd = document.querySelector(".popup_type_card");
+  const url = inputUrl.value;
+  const name = inputName.value;
+
+  const cardInfo = {
+    name: name,
+    link: url,
+  };
+
+  renderCard(createCard(cardInfo));
+
+  inputUrl.value = "";
+  inputName.value = "";
+
+  closePopup(popupAdd);
+}
