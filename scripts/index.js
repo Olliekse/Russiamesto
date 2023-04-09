@@ -10,6 +10,10 @@ const inputUrl = document.getElementById("pic-link");
 const inputName = document.getElementById("place-name");
 const photoText = document.querySelector(".popup__photo-text");
 const photo = document.querySelector("#photo");
+const popupProfile = document.querySelector(".popup_type_profile");
+const popupAdd = document.querySelector(".popup_type_card");
+const popupPhoto = document.querySelector(".popup_type_photo");
+
 
 // calls the function that renders the six initial cards
 
@@ -20,10 +24,9 @@ renderInitialCards();
 document
   .querySelector(".profile__edit-btn-box")
   .addEventListener("click", () => {
-    const popupProfile = document.querySelector(".popup_type_profile");
     const name = newName.textContent;
     const job = newJob.textContent;
-	
+
     nameInput.value = name;
     jobInput.value = job;
 
@@ -33,7 +36,7 @@ document
 // closes the 'edit profile' popup upon clicking the 'X'
 
 document.querySelector(".popup__close").addEventListener("click", () => {
-  const popupProfile = document.querySelector(".popup_type_profile");
+  
 
   closePopup(popupProfile);
 });
@@ -41,7 +44,7 @@ document.querySelector(".popup__close").addEventListener("click", () => {
 // opens the 'add card' popup
 
 document.querySelector(".profile__add-btn").addEventListener("click", () => {
-  const popupAdd = document.querySelector(".popup_type_card");
+ 
 
   openPopup(popupAdd);
 });
@@ -49,15 +52,14 @@ document.querySelector(".profile__add-btn").addEventListener("click", () => {
 // closes the 'add card' popup upon clicking the 'X'
 
 document.getElementById("popup-close").addEventListener("click", () => {
-  const popupAdd = document.querySelector(".popup_type_card");
-
+  
   closePopup(popupAdd);
 });
 
 // closes the zoomed photo popup upon clicking the 'X'
 
 document.getElementById("popup-photo-close").addEventListener("click", () => {
-  const popupPhoto = document.querySelector(".popup_type_photo");
+  
 
   closePopup(popupPhoto);
 });
@@ -86,7 +88,7 @@ function renderInitialCards() {
 // appends a newly created card to the parent container
 
 function renderCard(elem) {
-  cardsContainer.append(elem);
+  cardsContainer.prepend(elem);
 }
 
 // creates a card with filled-in info, like and delete buttons and the corresponding listeners
@@ -103,25 +105,21 @@ function createCard(item) {
   cardPhoto.alt = item.name;
   cardPhoto.src = item.link;
 
-  deleteButton.addEventListener("click", (e) => {
-    const cardToRemove = e.target.parentNode;
+  deleteButton.addEventListener("click", () => {
 
-    cardToRemove.remove();
+    cardElement.remove();
   });
 
-  heartIcon.addEventListener("click", (e) => {
-    const cardLiked = e.target;
+  heartIcon.addEventListener("click", () => {
 
-    cardLiked.classList.toggle("card__heart_active");
+    heartIcon.classList.toggle("card__heart_active");
   });
 
-  cardPhoto.addEventListener("click", (e) => {
-    const popupPhoto = document.querySelector(".popup_type_photo");
-    const photoClicked = e.target;
+  cardPhoto.addEventListener("click", () => {
 
-    photo.src = photoClicked.src;
-    photo.alt = photoClicked.alt;
-    photoText.textContent = photoClicked.alt;
+    photo.src = item.link;
+    photo.alt = item.name;
+    photoText.textContent = item.name;
 
     openPopup(popupPhoto);
   });
@@ -132,13 +130,13 @@ function createCard(item) {
 // a single function that can open any of the three popups
 
 function openPopup(element) {
-  element.classList.toggle("popup_opened");
+  element.classList.add("popup_opened");
 }
 
 // a single function that can close any of the three popups
 
 function closePopup(element) {
-  element.classList.toggle("popup_opened");
+  element.classList.remove("popup_opened");
 }
 
 // submits user-entered 'edit profile' popup info
@@ -146,7 +144,6 @@ function closePopup(element) {
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
-  const popupProfile = document.querySelector(".popup_type_profile");
 
   newName.textContent = nameInput.value;
   newJob.textContent = jobInput.value;
@@ -159,7 +156,6 @@ function handleProfileFormSubmit(evt) {
 function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
 
-  const popupAdd = document.querySelector(".popup_type_card");
   const url = inputUrl.value;
   const name = inputName.value;
 
